@@ -296,7 +296,7 @@ nav h1 a {
 }
 #reviews-list .rating{
   background-color:orange;
-  max-width: 25%; 
+  max-width: 20%; 
   padding: 5px;
   color: white;
   min-width: 19%;
