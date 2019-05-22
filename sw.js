@@ -6,12 +6,9 @@ const urlsToCache = [
   'js/dbhelper.js',
   'js/restaurant_info.js',
   'data/restaurants.json',
-  // 'img/1.jpg',
-  // 'index.html',
-  // 'restaurant.html'
 ];
 
-self.addEventListener('install', (event)=> {
+self.addEventListener('install', (event)=> { //cache all files
   event.waitUntil(  
     caches.open(cache_name)
       .then((cache)=> {
@@ -25,7 +22,7 @@ self.addEventListener('install', (event)=> {
 });
 
 
-self.addEventListener('fetch', (event)=> {
+self.addEventListener('fetch', (event)=> { //if the app is offline, then use cache.
     
     event.respondWith(
       caches.match(event.request)
